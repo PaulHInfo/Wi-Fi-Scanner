@@ -20,12 +20,4 @@ def discover_wifi():
     print(decoded_devices)
 
 
-#Création de la console a faire
-var = input("Entré 1 pour scanner, 2 pour lister : ")
 
-if var == '1':
-    scan()
-elif var == '2':
-    discover_wifi()
-else:
-    print("entrée fausse")
