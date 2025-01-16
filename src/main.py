@@ -1,4 +1,4 @@
-from src.tools.main import *
+from src.tools.wifi import *
 print("""\
 +--------------------------------------------------------------------+
 |  __        ___       _____ _   _____           _ ____              |
@@ -10,16 +10,19 @@ print("""\
  """)
 print("Tools list -> Commande")
 print("1 - Scann -> scann")
-print("2 - Wifi check -> wch")
+print("2 - discover -> disc")
 
 
 def check_input(a):
     if(a == "scann"):
+
         scan()
-    elif(a == "wch"):
-        pass
+    elif(a == "disc"):
+
+        discover_wifi()
     else:
         print("please retry")
+        pass
 
 a = input("commande : ")
 check_input(a)
