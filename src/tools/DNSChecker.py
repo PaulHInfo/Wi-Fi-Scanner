@@ -4,12 +4,10 @@ from scapy.layers.inet import IP, UDP
 
 def dns_analyzer(packet):
     if packet.haslayer(DNS):
-        # Vérifier si c'est une requête DNS
         if packet.haslayer(DNSQR):
             dns_query = packet[DNSQR].qname.decode('utf-8')
             print(f"[+] DNS : {dns_query}")
 
-        # Vérifier si c'est une réponse DNS
         if packet.haslayer(DNSRR):
             dns_response = packet[DNSRR].rdata
             print(f"[+] DNS ANSWERS : {dns_response}")
